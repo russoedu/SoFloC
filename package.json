@@ -2,7 +2,7 @@
   "name": "sofloc",
   "version": "1.0.0",
   "private": false,
-  "homepage": "https://russoedu.github.io/sofloc",
+  "homepage": "https://russoedu.github.io/SoFloC/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
