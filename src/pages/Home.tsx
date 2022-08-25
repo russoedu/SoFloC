@@ -2,8 +2,6 @@ import { Container, Paper } from '@mui/material'
 import './Home.css'
 import whereIsMyFlow from '../assets/where-is-my-flow.png'
 
-
-
 export function Home () {
   return (
     <Container className='container'>

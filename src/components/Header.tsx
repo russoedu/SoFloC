@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, ButtonGroup, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, ButtonGroup, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 import './Header.css'
 import { FaBars, FaNpm } from 'react-icons/fa'
@@ -6,12 +6,6 @@ import { GoMarkGithub } from 'react-icons/go'
 import { useState } from 'react'
 import { Logo } from './Logo'
 import { ViewOnButton } from './ViewOnButton'
-
-const pages = [
-  { name: 'Colors Sheet', link: '/sheet' },
-  { name: 'CSS Color Cheet', link: '/css-sheet' },
-  { name: 'Color picker', link: '/picker' },
-]
 
 export function Header () {
 
@@ -32,31 +26,15 @@ export function Header () {
         <Toolbar disableGutters sx={{ justifyContent: 'start', display: 'flex' }}>
           <Logo sx={{ mr: 2 }} />
 
-          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Link to={page.link} key={page.name}>
-                <Button
-                  key={page.name}
-                  sx={{ my: 2, display: 'block' }}
-                  color='secondary'
-                >
-                  <Typography textAlign="center">
-                    {page.name}
-                  </Typography>
-                </Button>
-              </Link>
-            ))}
-          </Box>
-
           <Box sx={{ flexGrow: 0, display: 'flex' }}>
             <ButtonGroup variant="contained" sx={{ marginLeft: '1em' }}>
               <ViewOnButton
-                url='https://github.com/russoedu/font-color-contrast'
+                url='https://github.com/russoedu/SoFloC-service'
                 text='view on GitHub'
                 icon={<GoMarkGithub />}
               />
               <ViewOnButton
-                url='https://www.npmjs.com/package/font-color-contrast'
+                url='https://www.npmjs.com/package/sofloc'
                 text='view on NPM'
                 icon={<FaNpm />}
               />
@@ -92,72 +70,10 @@ export function Header () {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    <Link to={page.link}>
-                      {page.name}
-                    </Link>
-                  </Typography>
-                </MenuItem>
-              ))}
             </Menu>
           </Box>
         </Toolbar>
       </Container>
-      {/* <Toolbar>
-        <Typography className='navbar-item logo' variant='h5' component='div'>
-          <Link to='/'>
-            <img src="/font-color-contrast-logo.svg" alt="logo" />
-            <div>font-color-contrast</div>
-          </Link>
-        </Typography>
-        <Typography className='navbar-item' variant='h6' component='div'>
-          <Link to='/sheet'>
-            Color sheet demo
-          </Link>
-        </Typography>
-        <Typography className='navbar-item' variant='h6' component='div'>
-          <Link to='/picker'>
-            Color picker demo
-          </Link>
-        </Typography>
-        <Typography className='navbar-item' variant='h6' component='div'>
-          <Link to='/css-sheet'>
-            CSS Color sheet demo
-          </Link>
-        </Typography>
-        <div className='buttons'>
-          <Button
-            className='vob-get-links'
-            color='secondary'
-            variant='contained'
-            endIcon={<GoMarkGithub />}
-          >
-            <a
-              href='https://github.com/russoedu/font-color-contrast'
-              target='_blank'
-              rel='noreferrer'
-            >
-              view on GitHub
-            </a>
-          </Button>
-          <Button
-            className='vob-get-links'
-            color='secondary'
-            variant='contained'
-            endIcon={<FaNpm />}
-          >
-            <a
-              href='https://www.npmjs.com/package/font-color-contrast'
-              target='_blank'
-              rel='noreferrer'
-            >
-              view on npm
-            </a>
-          </Button>
-        </div>
-      </Toolbar> */}
     </AppBar>
   )
 }

@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 import { SxProps, Theme } from "@mui/system";
-import { Link } from "react-router-dom";
 import './Logo.css'
 import logo from '../assets/sofloc-logo.svg'
+
 export function Logo ({ sx }: {
   sx?: SxProps<Theme>,
 }) {
@@ -14,9 +14,9 @@ export function Logo ({ sx }: {
       component='div'
       sx={sx}
     >
-      <Link to='/'>
+      <a href='/'>
         <img src={logo} alt="sofloc-logo" />
-      </Link>
+      </a>
     </Typography>
   )
 }
