@@ -12,7 +12,7 @@ export function ViewOnButton ({ url, text, icon }: {
         className='vob-get-links'
         color='secondary'
         variant='contained'
-        sx={{ display: { lg: 'flex', xs: 'none' } }}
+        sx={{ display: { sm: 'flex', xs: 'none' } }}
         endIcon={icon}
         href={url}
         target='_blank'
@@ -24,7 +24,7 @@ export function ViewOnButton ({ url, text, icon }: {
         className='vob-get-links vob-get-links-compact'
         color='secondary'
         variant='contained'
-        sx={{ display: { md: 'flex', lg: 'none' }, paddingRight: '10px' }}
+        sx={{ display: { xm: 'flex', sm: 'none' }, paddingRight: '10px' }}
       >
         <span className='vob-get-links-icon'>
           {icon}

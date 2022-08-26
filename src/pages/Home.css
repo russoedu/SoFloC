@@ -1,5 +1,8 @@
-a > img {
-  padding-right: 10px;
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .readme {

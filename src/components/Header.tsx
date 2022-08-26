@@ -1,33 +1,19 @@
-import { AppBar, Box, ButtonGroup, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { AppBar, Box, ButtonGroup, Container, Toolbar } from '@mui/material'
 import './Header.css'
-import { FaBars, FaNpm } from 'react-icons/fa'
+import { FaNpm } from 'react-icons/fa'
 import { GoMarkGithub } from 'react-icons/go'
-import { useState } from 'react'
 import { Logo } from './Logo'
 import { ViewOnButton } from './ViewOnButton'
 
 export function Header () {
-
-  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  }
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null)
-  }
-
-
   return (
-    <AppBar position='sticky' enableColorOnDark>
-      <Container maxWidth="xl">
+    <AppBar position='sticky' sx={{ minWidth: 300 }} enableColorOnDark>
+      <Container>
         <Toolbar disableGutters sx={{ justifyContent: 'start', display: 'flex' }}>
-          <Logo sx={{ mr: 2 }} />
+          <Logo/>
 
           <Box sx={{ flexGrow: 0, display: 'flex' }}>
-            <ButtonGroup variant="contained" sx={{ marginLeft: '1em' }}>
+            <ButtonGroup variant="contained" sx={{ ml: '0.1em' }}>
               <ViewOnButton
                 url='https://github.com/russoedu/SoFloC-service'
                 text='view on GitHub'
@@ -39,38 +25,6 @@ export function Header () {
                 icon={<FaNpm />}
               />
             </ButtonGroup>
-          </Box>
-
-          <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="menu"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <FaBars />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-            </Menu>
           </Box>
         </Toolbar>
       </Container>

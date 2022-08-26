@@ -20,4 +20,4 @@ The option you end up having is recreating the whole Flow again or doing it manu
 
 **SoFloC** provides an easy solution to read the files on a ***Solution*** and update the version and create copies of the specified Flows.
 
-Access [**SoFloC** desktop app](https://russoedu.github.io/SoFloC/) page to get all the details.
+Access [**SoFloC** desktop app](https://russoedu.github.io/sofloc/) page to get all the details.

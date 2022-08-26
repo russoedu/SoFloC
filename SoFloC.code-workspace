@@ -38,10 +38,10 @@
         "type": "node-terminal"
       },
       {
-        "name": "Launch Chrome",
+        "name": "Launch Edge",
         "request": "launch",
-        "type": "pwa-chrome",
-        "url": "http://localhost:3000",
+        "type": "msedge",
+        "url": "http://localhost:3000/sofloc",
         "webRoot": "${workspaceFolder}"
       }
     ]

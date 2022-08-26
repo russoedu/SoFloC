@@ -6,13 +6,3 @@
   max-height: 44px;
   float: left;
 }
-
-.logo-text {
-  padding-top: 6px;
-}
-
-@media (max-width: 600px) {
-  .logo-text {
-    display: none;
-  }
-}
